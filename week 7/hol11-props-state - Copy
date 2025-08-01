@@ -1,0 +1,14 @@
+import React, { useState } from 'react';
+import Message from './Message';
+
+function App() {
+  const [name, setName] = useState('React Student');
+  return <Message userName={name} />;
+}
+
+export default App;
+
+// Message.js
+export default function Message({ userName }) {
+  return <h2>Hello, {userName}!</h2>;
+}

@@ -1,0 +1,15 @@
+import React, { useEffect, useState } from 'react';
+
+function App() {
+  const [message, setMessage] = useState('Loading...');
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMessage('Data loaded!');
+    }, 2000);
+  }, []);
+
+  return <h1>{message}</h1>;
+}
+
+export default App;
